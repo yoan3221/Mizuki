@@ -16,84 +16,84 @@ import type {
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
-// 移除i18n导入以避免循环依赖
+// 移除i18n導入以避免循環依賴
 
-// 定义站点语言
-const SITE_LANG = "en"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
-const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
+// 定義站點語言
+const SITE_LANG = "en"; // 語言代碼，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_TIMEZONE = 8; // 設置你的網站時區 from -12 to 12 default in UTC+8
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
-	subtitle: "One demo website",
-	siteURL: "https://mizuki.mysqil.com/", // 请替换为你的站点URL，以斜杠结尾
-	siteStartDate: "2025-01-01", // 站点开始运行日期，用于站点统计组件计算运行天数
+	title: "g8kz",
+	subtitle: "Exploring the Intersection of Hardware and Software",
+	siteURL: "https://www.g8kz.com/", // 請替換為你的站點URL，以斜杠結尾
+	siteStartDate: "2026-01-01", // 站點開始運行日期，用於站點統計組件計算運行天數
 
 	timeZone: SITE_TIMEZONE,
 
 	lang: SITE_LANG,
 
 	themeColor: {
-		hue: 230, // 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		fixed: false, // 对访问者隐藏主题色选择器
+		hue: 230, // 主題色的默認色相，範圍從 0 到 360。例如：紅色：0，青色：200，藍綠色：250，粉色：345
+		fixed: false, // 對訪問者隱藏主題色選擇器
 	},
 
-	// 特色页面开关配置(关闭不在使用的页面有助于提升SEO,关闭后直接在顶部导航删除对应的页面就行)
+	// 特色頁面開關配置(關閉不在使用的頁面有助於提升SEO,關閉後直接在頂部導航刪除對應的頁面就行)
 	featurePages: {
-		anime: true, // 番剧页面开关
-		diary: true, // 日记页面开关
-		friends: true, // 友链页面开关
-		projects: true, // 项目页面开关
-		skills: true, // 技能页面开关
-		timeline: true, // 时间线页面开关
-		albums: true, // 相册页面开关
-		devices: true, // 设备页面开关
+		anime: true, // 番劇頁面開關
+		diary: true, // 日記頁面開關
+		friends: true, // 友鏈頁面開關
+		projects: true, // 項目頁面開關
+		skills: true, // 技能頁面開關
+		timeline: true, // 時間線頁面開關
+		albums: true, // 相冊頁面開關
+		devices: true, // 設備頁面開關
 	},
 
-	// 顶栏标题配置
+	// 頂欄標題配置
 	navbarTitle: {
-		// 顶栏标题文本
-		text: "MizukiUI",
-		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
+		// 頂欄標題文本
+		text: "g8kz",
+		// 頂欄標題圖標路徑，默認使用 public/assets/home/home.png
 		icon: "assets/home/home.png",
 	},
 
 	bangumi: {
-		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
-		fetchOnDev: false, // 是否在开发环境下获取 Bangumi 数据（默认 false），获取前先执行 pnpm build 构建 json 文件
+		userId: "your-bangumi-id", // 在此處設置你的Bangumi用戶ID，可以設置為 "sai" 測試
+		fetchOnDev: false, // 是否在開發環境下獲取 Bangumi 數據（默認 false），獲取前先執行 pnpm build 構建 json 文件
 	},
 
 	anime: {
-		mode: "local", // 番剧页面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
+		mode: "local", // 番劇頁面模式："bangumi" 使用Bangumi API，"local" 使用本地配置
 	},
 
-	// 文章列表布局配置
+	// 文章列表佈局配置
 	postListLayout: {
-		// 默认布局模式："list" 列表模式（单列布局），"grid" 网格模式（双列布局）
-		// 注意：如果侧边栏配置启用了"both"双侧边栏，则无法使用文章列表"grid"网格（双列）布局
+		// 默認佈局模式："list" 列表模式（單列佈局），"grid" 網格模式（雙列佈局）
+		// 注意：如果側邊欄配置啟用了"both"雙側邊欄，則無法使用文章列表"grid"網格（雙列）佈局
 		defaultMode: "list",
-		// 是否允许用户切换布局
+		// 允許用戶切換佈局
 		allowSwitch: true,
 	},
 
-	// 标签样式配置
+	// 標籤樣式配置
 	tagStyle: {
-		// 是否使用新样式（悬停高亮样式）还是旧样式（外框常亮样式）
+		// 是否使用新樣式（懸停高亮樣式）還是舊樣式（外框常亮樣式）
 		useNewStyle: false,
 	},
 
-	// 壁纸模式配置
+	// 壁紙模式配置
 	wallpaperMode: {
-		// 默认壁纸模式：banner=顶部横幅，fullscreen=全屏壁纸，none=无壁纸
-		defaultMode: "banner",
-		// 整体布局方案切换按钮显示设置（默认："desktop"）
-		// "off" = 不显示
-		// "mobile" = 仅在移动端显示
-		// "desktop" = 仅在桌面端显示
-		// "both" = 在所有设备上显示
+		// 默認壁紙模式：banner=頂部橫幅，fullscreen=全屏壁紙，none=無壁紙
+		defaultMode: "fullscreen",
+		// 整體佈局方案切換按鈕顯示設置（默認："desktop"）
+		// "off" = 不顯示
+		// "mobile" = 僅在移動端顯示
+		// "desktop" = 僅在桌面端顯示
+		// "both" = 在所有設備上顯示
 		showModeSwitchOnMobile: "desktop",
 	},
 
 	banner: {
-		// 支持单张图片或图片数组，当数组长度 > 1 时自动启用轮播
+		// 支持單張圖片或圖片數組，當數組長度 > 1 時自動啟用輪播
 		src: {
 			desktop: [
 				"/assets/desktop-banner/1.webp",
@@ -102,7 +102,7 @@ export const siteConfig: SiteConfig = {
 				"/assets/desktop-banner/4.webp",
 				"/assets/desktop-banner/5.webp",
 				"/assets/desktop-banner/6.webp",
-			], // 桌面横幅图片
+			], // 桌面橫幅圖片
 			mobile: [
 				"/assets/mobile-banner/1.webp",
 				"/assets/mobile-banner/2.webp",
@@ -110,101 +110,98 @@ export const siteConfig: SiteConfig = {
 				"/assets/mobile-banner/4.webp",
 				"/assets/mobile-banner/5.webp",
 				"/assets/mobile-banner/6.webp",
-			], // 移动横幅图片
-		}, // 使用本地横幅图片
+			], // 移動橫幅圖片
+		}, // 使用本地橫幅圖片
 
-		position: "center", // 等同于 object-position，仅支持 'top', 'center', 'bottom'。默认为 'center'
+		position: "center", // 等同於 object-position，僅支持 'top', 'center', 'bottom'。默認為 'center'
 
 		carousel: {
-			enable: true, // 为 true 时：为多张图片启用轮播。为 false 时：从数组中随机显示一张图片
-
-			interval: 1.5, // 轮播间隔时间（秒）
+			enable: true, // 為 true 時：為多張圖片啟用輪播。為 false 時：從數組中隨機顯示一張圖片
+			interval: 1.5, // 輪播間隔時間（秒）
 		},
 
 		waves: {
-			enable: true, // 是否启用水波纹效果(这个功能比较吃性能)
-			performanceMode: false, // 性能模式：减少动画复杂度(性能提升40%)
-			mobileDisable: false, // 移动端禁用
+			enable: true, // 是否啟用水波紋效果(這個功能比較吃性能)
+			performanceMode: false, // 性能模式：減少動畫複雜度(性能提升40%)
+			mobileDisable: false, // 移動端禁用
 		},
 
-		// PicFlow API支持(智能图片API)
+		// PicFlow API支持(智能圖片API)
 		imageApi: {
-			enable: false, // 启用图片API
-			url: "http://domain.com/api_v2.php?format=text&count=4", // API地址，返回每行一个图片链接的文本
+			enable: false, // 啟用圖片API
+			url: "http://domain.com/api_v2.php?format=text&count=4", // API地址，返回每行一個圖片鏈接的文本
 		},
-		// 这里需要使用PicFlow API的Text返回类型,所以我们需要format=text参数
-		// 项目地址:https://github.com/matsuzaka-yuki/PicFlow-API
-		// 请自行搭建API
+		// 這裡需要使用PicFlow API的Text返回類型,所以我們需要format=text參數
+		// 項目地址:https://github.com/matsuzaka-yuki/PicFlow-API
+		// 請自行搭建API
 
 		homeText: {
-			enable: true, // 在主页显示自定义文本
-			title: "美しいミズキ", // 主页横幅主标题
+			enable: true, // 在主頁顯示自定義文本
+			title: "g8kz's Hub", // 主頁橫幅主標題
 
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"Fortune favors the bold.",
+				"Knowledge is power.",
+				"The devil is in the details.",
+				"Standing on the shoulders of giants.",
+				"Where there's a will, there's a way.",
 			],
 			typewriter: {
-				enable: true, // 启用副标题打字机效果
-
+				enable: true, // 啟用副標題打字機效果
 				speed: 100, // 打字速度（毫秒）
-				deleteSpeed: 50, // 删除速度（毫秒）
-				pauseTime: 2000, // 完全显示后的暂停时间（毫秒）
+				deleteSpeed: 50, // 刪除速度（毫秒）
+				pauseTime: 2000, // 完全顯示後的暫停時間（毫秒）
 			},
 		},
 
 		credit: {
-			enable: false, // 显示横幅图片来源文本
-
-			text: "Describe", // 要显示的来源文本
-			url: "", // （可选）原始艺术品或艺术家页面的 URL 链接
+			enable: false, // 顯示橫幅圖片來源文本
+			text: "Describe", // 要顯示的來源文本
+			url: "", // （可選）原始藝術品或藝術家頁面的 URL 鏈接
 		},
 
 		navbar: {
-			transparentMode: "semifull", // 导航栏透明模式："semi" 半透明加圆角，"full" 完全透明，"semifull" 动态透明
+			transparentMode: "semifull", // 導航欄透明模式："semi" 半透明加圓角，"full" 完全透明，"semifull" 動態透明
 		},
 	},
 	toc: {
-		enable: true, // 启用目录功能
-		mode: "sidebar", // 目录显示模式："float" 悬浮按钮模式，"sidebar" 侧边栏模式
-		depth: 2, // 目录深度，1-6，1 表示只显示 h1 标题，2 表示显示 h1 和 h2 标题，依此类推
-		useJapaneseBadge: true, // 使用日语假名标记（あいうえお...）代替数字，开启后会将 1、2、3... 改为 あ、い、う...
+		enable: true, // 啟用目錄功能
+		mode: "sidebar", // 目錄顯示模式："float" 懸浮按鈕模式，"sidebar" 側邊欄模式
+		depth: 2, // 目錄深度，1-6，1 表示只顯示 h1 標題，2 表示顯示 h1 和 h2 標題，依此類推
+		useJapaneseBadge: false, // 使用日語假名標記（あいうえお...）代替數字，開啟後會將 1、2、3... 改為 あ、い、う...
 	},
-	showCoverInContent: true, // 在文章内容页显示文章封面
-	generateOgImages: false, // 启用生成OpenGraph图片功能,注意开启后要渲染很长时间，不建议本地调试的时候开启
+	showCoverInContent: true, // 在文章內容頁顯示文章封面
+	generateOgImages: false, // 啟用生成OpenGraph圖片功能,注意開啟後要渲染很長時間，不建議本地調試的時候開啟
 	favicon: [
-		// 留空以使用默认 favicon
+		// 留空以使用默認 favicon
 		// {
-		//   src: '/favicon/icon.png',    // 图标文件路径
-		//   theme: 'light',              // 可选，指定主题 'light' | 'dark'
-		//   sizes: '32x32',              // 可选，图标大小
+		//   src: '/favicon/icon.png',    // 圖標文件路徑
+		//   theme: 'light',              // 可選，指定主題 'light' | 'dark'
+		//   sizes: '32x32',              // 可選，圖標大小
 		// }
 	],
 
-	// 字体配置
+	// 字體配置
 	font: {
-		// 注意：自定义字体需要在 src/styles/main.css 中引入字体文件
-		// 注意：字体子集优化功能目前仅支持 TTF 格式字体,开启后需要在生产环境才能看到效果,在Dev环境下显示的是浏览器默认字体!
+		// 注意：自定義字體需要在 src/styles/main.css 中引入字體文件
+		// 注意：字體子集優化功能目前僅支持 TTF 格式字體,開啟後需要在生產環境才能看到效果,在Dev環境下顯示的是瀏覽器默認字體!
 		asciiFont: {
-			// 英文字体 - 优先级最高
-			// 指定为英文字体则无论字体包含多大范围，都只会保留 ASCII 字符子集
+			// 英文字體 - 優先級最高
+			// 指定為英文字體則無論字體包含多大範圍，都只會保留 ASCII 字符子集
 			fontFamily: "ZenMaruGothic-Medium",
 			fontWeight: "400",
 			localFonts: ["ZenMaruGothic-Medium.ttf"],
-			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+			enableCompress: true, // 啟用字體子集優化，減少字體文件大小
 		},
 		cjkFont: {
-			// 中日韩字体 - 作为回退字体
-			fontFamily: "萝莉体 第二版",
+			// 中日韓字體 - 作為回退字體
+			fontFamily: "loli-body-2",
 			fontWeight: "500",
-			localFonts: ["萝莉体 第二版.ttf"],
-			enableCompress: true, // 启用字体子集优化，减少字体文件大小
+			localFonts: ["loli-body-2.ttf"],
+			enableCompress: true, // 啟用字體子集優化，減少字體文件大小
 		},
 	},
-	showLastModified: true, // 控制“上次编辑”卡片显示的开关
+	showLastModified: true, // 控制“上次編輯”卡片顯示的開關
 };
 export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 	src: {
@@ -215,7 +212,7 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 			"/assets/desktop-banner/4.webp",
 			"/assets/desktop-banner/5.webp",
 			"/assets/desktop-banner/6.webp",
-		], // 桌面横幅图片
+		], // 桌面橫幅圖片
 		mobile: [
 			"/assets/mobile-banner/1.webp",
 			"/assets/mobile-banner/2.webp",
@@ -223,15 +220,15 @@ export const fullscreenWallpaperConfig: FullscreenWallpaperConfig = {
 			"/assets/mobile-banner/4.webp",
 			"/assets/mobile-banner/5.webp",
 			"/assets/mobile-banner/6.webp",
-		], // 移动横幅图片
-	}, // 使用本地横幅图片
-	position: "center", // 壁纸位置，等同于 object-position
+		], // 移動橫幅圖片
+	}, // 使用本地橫幅圖片
+	position: "center", // 壁紙位置，等同於 object-position
 	carousel: {
-		enable: true, // 启用轮播
-		interval: 5, // 轮播间隔时间（秒）
+		enable: true, // 啟用輪播
+		interval: 5, // 輪播間隔時間（秒）
 	},
-	zIndex: -1, // 层级，确保壁纸在背景层
-	opacity: 0.8, // 壁纸透明度
+	zIndex: -1, // 層級，確保壁紙在背景層
+	opacity: 0.8, // 壁紙透明度
 	blur: 1, // 背景模糊程度
 };
 
@@ -239,29 +236,36 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
-		// 支持自定义导航栏链接,并且支持多级菜单,3.1版本新加
+		// 支持自定義導航欄鏈接,並且支持多級菜單,3.1版本新加
 		{
 			name: "Links",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
 				{
-					name: "GitHub",
-					url: "https://github.com/matsuzaka-yuki/Mizuki",
-					external: true,
-					icon: "fa6-brands:github",
+					name: "Discord",
+					icon: "fa6-brands:discord",
+					url: "https://discordapp.com/users/615479304540651541",
 				},
 				{
-					name: "Bilibili",
-					url: "https://space.bilibili.com/701864046",
-					external: true,
-					icon: "fa6-brands:bilibili",
+					name: "Facebook",
+					icon: "fa6-brands:facebook",
+					url: "https://www.facebook.com/yoan.happy.3",
 				},
 				{
-					name: "Gitee",
-					url: "https://gitee.com/matsuzakayuki/Mizuki",
-					external: true,
-					icon: "mdi:git",
+					name: "Threads",
+					icon: "fa6-brands:threads",
+					url: "https://www.threads.com/@yuan_uwu?hl=zh-tw",
+				},
+				{
+					name: "Instagram",
+					icon: "fa6-brands:instagram",
+					url: "https://www.instagram.com/yuan_uwu",
+				},
+				{
+					name: "Openlist",
+					icon: "material-symbols:list-alt",
+					url: "https://openlist.g8kz.top/",
 				},
 			],
 		},
@@ -336,38 +340,38 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
-	name: "Matsuzaka Yuki",
-	bio: "The world is big, you have to go and see",
+	avatar: "assets/images/avatar.webp", // 相對於 /src 目錄。如果以 '/' 開頭，則相對於 /public 目錄
+	name: "g8kz",
+	bio: "Cross-domain integrator, blending PLC/Hardware with AI/Software. A Home Lab and photography enthusiast.",
 	typewriter: {
-		enable: true, // 启用个人简介打字机效果
+		enable: true, // 啟用個人簡介打字機效果
 		speed: 80, // 打字速度（毫秒）
 	},
 	links: [
 		{
-			name: "Bilibli",
-			icon: "fa6-brands:bilibili",
-			url: "https://space.bilibili.com/701864046",
-		},
-		{
-			name: "Gitee",
-			icon: "mdi:git",
-			url: "https://gitee.com/matsuzakayuki",
-		},
-		{
-			name: "GitHub",
-			icon: "fa6-brands:github",
-			url: "https://github.com/matsuzaka-yuki",
-		},
-		{
-			name: "Codeberg",
-			icon: "simple-icons:codeberg",
-			url: "https://codeberg.org",
-		},
-		{
 			name: "Discord",
 			icon: "fa6-brands:discord",
-			url: "https://discord.gg/MqW6TcQtVM",
+			url: "https://discordapp.com/users/615479304540651541",
+		},
+		{
+			name: "Facebook",
+			icon: "fa6-brands:facebook",
+			url: "https://www.facebook.com/yoan.happy.3",
+		},
+		{
+			name: "Threads",
+			icon: "fa6-brands:threads",
+			url: "https://www.threads.com/@yuan_uwu?hl=zh-tw",
+		},
+		{
+			name: "Instagram",
+			icon: "fa6-brands:instagram",
+			url: "https://www.instagram.com/yuan_uwu",
+		},
+		{
+			name: "Openlist",
+			icon: "material-symbols:list-alt",
+			url: "https://openlist.g8kz.top/",
 		},
 	],
 };
@@ -378,42 +382,42 @@ export const licenseConfig: LicenseConfig = {
 	url: "https://creativecommons.org/licenses/by-nc-sa/4.0/",
 };
 
-// Permalink 固定链接配置
+// Permalink 固定鏈接配置
 export const permalinkConfig: PermalinkConfig = {
-	enable: false, // 是否启用全局 permalink 功能，关闭时使用默认的文件名作为链接
+	enable: false, // 是否啟用全局 permalink 功能，關閉時使用默認的文件名作為鏈接
 	/**
 	 * permalink 格式模板
-	 * 支持的占位符：
+	 * 支持的佔位符：
 	 * - %year% : 4位年份 (2024)
 	 * - %monthnum% : 2位月份 (01-12)
 	 * - %day% : 2位日期 (01-31)
-	 * - %hour% : 2位小时 (00-23)
-	 * - %minute% : 2位分钟 (00-59)
-	 * - %second% : 2位秒数 (00-59)
-	 * - %post_id% : 文章序号（按发布时间升序排列，最早的文章为1）
+	 * - %hour% : 2位小時 (00-23)
+	 * - %minute% : 2位分鐘 (00-59)
+	 * - %second% : 2位秒數 (00-59)
+	 * - %post_id% : 文章序號（按發布時間升序排列，最早的文章為1）
 	 * - %postname% : 文章文件名（slug）
-	 * - %category% : 分类名（无分类时为 "uncategorized"）
+	 * - %category% : 分類名（無分類時為 "uncategorized"）
 	 *
 	 * 示例：
 	 * - "%year%-%monthnum%-%postname%" => "/2024-12-my-post/"
 	 * - "%post_id%-%postname%" => "/42-my-post/"
 	 * - "%category%-%postname%" => "/tech-my-post/"
 	 *
-	 * 注意：不支持斜杠 "/"，所有生成的链接都在根目录下
+	 * 注意：不支持斜杠 "/"，所有生成的鏈接都在根目錄下
 	 */
-	format: "%postname%", // 默认使用文件名
+	format: "%postname%", // 默認使用文件名
 };
 
 export const expressiveCodeConfig: ExpressiveCodeConfig = {
-	// 注意：某些样式（如背景颜色）已被覆盖，请参阅 astro.config.mjs 文件。
-	// 请选择深色主题，因为此博客主题目前仅支持深色背景
+	// 注意：某些樣式（如背景顏色）已被覆蓋，請參閱 astro.config.mjs 文件。
+	// 請選擇深色主題，因為此博客主題目前僅支持深色背景
 	theme: "github-dark",
-	// 是否在主题切换时隐藏代码块以避免卡顿问题
+	// 在主題切換時隱藏代碼塊以避免卡頓
 	hideDuringThemeTransition: true,
 };
 
 export const commentConfig: CommentConfig = {
-	enable: false, // 启用评论功能。当设置为 false 时，评论组件将不会显示在文章区域。
+	enable: false, // 啟用評論功能。當設置為 false 時，評論組件將不會顯示在文章區域。
 	twikoo: {
 		envId: "https://twikoo.vercel.app",
 		lang: SITE_LANG,
@@ -421,244 +425,244 @@ export const commentConfig: CommentConfig = {
 };
 
 export const shareConfig: ShareConfig = {
-	enable: true, // 启用分享功能。当设置为 false 时，分享组件将不会显示在文章区域，且不会加载分享组件使用的库
+	enable: true, // 啟用分享功能。當設置為 false 時，分享組件將不會顯示在文章區域，且不會加載其使用的庫
 };
 
 export const announcementConfig: AnnouncementConfig = {
-	title: "Announcement", // 公告标题
-	content: "Welcome to my blog! This is a sample announcement.", // 公告内容
-	closable: true, // 允许用户关闭公告
+	title: "Announcement", // 公告標題
+	content: "Welcome to my blog! This is a sample announcement.", // 公告內容
+	closable: true, // 允許用戶關閉公告
 	link: {
-		enable: true, // 启用链接
-		text: "Learn More", // 链接文本
-		url: "/about/", // 链接 URL
-		external: false, // 内部链接
+		enable: true, // 啟用鏈接
+		text: "Learn More", // 鏈接文本
+		url: "/about/", // 鏈接 URL
+		external: false, // 內部鏈接
 	},
 };
 
 export const musicPlayerConfig: MusicPlayerConfig = {
-	enable: true, // 启用音乐播放器功能
-	mode: "meting", // 音乐播放器模式，可选 "local" 或 "meting"
+	enable: false, // 啟用音樂播放器功能
+	mode: "meting", // 音樂播放器模式，"local" 或 "meting"
 	meting_api:
 		"https://www.bilibili.uno/api?server=:server&type=:type&id=:id&auth=:auth&r=:r", // Meting API 地址
-	id: "14164869977", // 歌单ID
-	server: "netease", // 音乐源服务器。有的meting的api源支持更多平台,一般来说,netease=网易云音乐, tencent=QQ音乐, kugou=酷狗音乐, xiami=虾米音乐, baidu=百度音乐
-	type: "playlist", // 播单类型
+	id: "14164869977", // 歌單ID
+	server: "netease", // 音樂源服務器。一些 meting API 源支持更多平台，通常：netease=網易雲音樂, tencent=QQ音樂, kugou=酷狗音樂, xiami=蝦米音樂, baidu=百度音樂
+	type: "playlist", // 播單類型
 };
 
 export const footerConfig: FooterConfig = {
-	enable: false, // 是否启用Footer HTML注入功能
-	customHtml: "", // HTML格式的自定义页脚信息，例如备案号等，默认留空
-	// 也可以直接编辑 FooterConfig.html 文件来添加备案号等自定义内容
-	// 注意：若 customHtml 不为空，则使用 customHtml 中的内容；若 customHtml 留空，则使用 FooterConfig.html 文件中的内容
-	// FooterConfig.html 可能会在未来的某个版本弃用
+	enable: false, // 是否啟用Footer HTML注入
+	customHtml: "", // HTML格式的自定義頁腳信息，例如ICP備案號，默認為空
+	// 你也可以直接編輯 FooterConfig.html 文件來添加自定義內容如ICP備案號
+	// 注意：如果 customHtml 不為空，將使用其內容；如果為空，將使用 FooterConfig.html 的內容
+	// FooterConfig.html 可能在未來版本中被棄用
 };
 
 /**
- * 侧边栏布局配置
- * 用于控制侧边栏组件的显示、排序、动画和响应式行为
- * sidebar: 控制组件在左侧栏和右侧栏,注意移动端是不会显示右侧栏的内容(unilateral模式除外),在设置了right属性的时候请确保你使用双侧(both)布局
+ * 側邊欄佈局配置
+ * 用於控制側邊欄組件的顯示、排序、動畫和響應式行為
+ * sidebar: 控制組件在左側欄和右側欄。注意移動端不顯示右側欄內容（unilateral模式除外）。設置right屬性時請確保使用雙側(both)佈局。
  */
 export const sidebarLayoutConfig: SidebarLayoutConfig = {
-	// 侧边栏位置：单侧(unilateral)或双侧(both)
+	// 側邊欄位置：單側(unilateral)或雙側(both)
 	position: "both",
 
-	// 侧边栏组件配置列表
+	// 側邊欄組件配置列表
 	components: [
 		{
-			// 组件类型：用户资料组件
+			// 組件類型：用戶資料組件
 			type: "profile",
-			// 是否启用该组件
+			// 是否啟用此組件
 			enable: true,
-			// 组件显示顺序（数字越小越靠前）
+			// 組件顯示順序（數字越小越靠前）
 			order: 1,
-			// 组件位置："top" 表示固定在顶部
+			// 組件位置："top" 表示固定在頂部
 			position: "top",
-			// 所在侧边栏
+			// 所屬側邊欄
 			sidebar: "left",
-			// CSS 类名，用于应用样式和动画
+			// 用於樣式和動畫的CSS類
 			class: "onload-animation",
-			// 动画延迟时间（毫秒），用于错开动画效果
+			// 動畫延遲（毫秒），用於錯開效果
 			animationDelay: 0,
 		},
 		{
-			// 组件类型：公告组件
+			// 組件類型：公告組件
 			type: "announcement",
-			// 是否启用该组件（现在通过统一配置控制）
+			// 此組件是否啟用（現在由統一配置控制）
 			enable: true,
-			// 组件显示顺序
+			// 組件顯示順序
 			order: 2,
-			// 组件位置："top" 表示固定在顶部
+			// 組件位置："top" 表示固定在頂部
 			position: "top",
-			// 所在侧边栏
+			// 所屬側邊欄
 			sidebar: "left",
-			// CSS 类名
+			// CSS類
 			class: "onload-animation",
-			// 动画延迟时间
+			// 動畫延遲
 			animationDelay: 50,
 		},
 		{
-			// 组件类型：分类组件
+			// 組件類型：分類組件
 			type: "categories",
-			// 是否启用该组件
+			// 是否啟用此組件
 			enable: true,
-			// 组件显示顺序
+			// 組件顯示順序
 			order: 3,
-			// 组件位置："sticky" 表示粘性定位，可滚动
+			// 組件位置："sticky" 表示粘性定位，可滾動
 			position: "sticky",
-			// 所在侧边栏
+			// 所屬側邊欄
 			sidebar: "left",
-			// CSS 类名
+			// CSS類
 			class: "onload-animation",
-			// 动画延迟时间
+			// 動畫延遲
 			animationDelay: 150,
-			// 响应式配置
+			// 響應式配置
 			responsive: {
-				// 折叠阈值：当分类数量超过5个时自动折叠
+				// 折疊閾值：當分類數量超過5個時自動折疊
 				collapseThreshold: 5,
 			},
 		},
 		{
-			// 组件类型：标签组件
+			// 組件類型：標籤組件
 			type: "tags",
-			// 是否启用该组件
+			// 是否啟用此組件
 			enable: true,
-			// 组件显示顺序
+			// 組件顯示順序
 			order: 5,
-			// 组件位置："sticky" 表示粘性定位
+			// 組件位置："sticky" 表示粘性定位
 			position: "top",
-			// 所在侧边栏
+			// 所屬側邊欄
 			sidebar: "left",
-			// CSS 类名
+			// CSS類
 			class: "onload-animation",
-			// 动画延迟时间
+			// 動畫延遲
 			animationDelay: 250,
-			// 响应式配置
+			// 響應式配置
 			responsive: {
-				// 折叠阈值：当标签数量超过20个时自动折叠
+				// 折疊閾值：當標籤數量超過20個時自動折疊
 				collapseThreshold: 20,
 			},
 		},
 		{
-			// 组件类型：站点统计组件
+			// 組件類型：站點統計組件
 			type: "site-stats",
-			// 是否启用该组件
+			// 是否啟用此組件
 			enable: true,
-			// 组件显示顺序
+			// 組件顯示順序
 			order: 5,
-			// 组件位置
+			// 組件位置
 			position: "top",
-			// 所在侧边栏
+			// 所屬側邊欄
 			sidebar: "right",
-			// CSS 类名
+			// CSS類
 			class: "onload-animation",
-			// 动画延迟时间
+			// 動畫延遲
 			animationDelay: 200,
 		},
 		{
-			// 组件类型：日历组件(移动端不显示)
+			// 組件類型：日曆組件（移動端不顯示）
 			type: "calendar",
-			// 是否启用该组件
+			// 是否啟用此組件
 			enable: true,
-			// 组件显示顺序
+			// 組件顯示順序
 			order: 6,
-			// 组件位置
+			// 組件位置
 			position: "top",
-			// 所在侧边栏
+			// 所屬側邊欄
 			sidebar: "right",
-			// CSS 类名
+			// CSS類
 			class: "onload-animation",
-			// 动画延迟时间
+			// 動畫延遲
 			animationDelay: 250,
 		},
 	],
 
-	// 默认动画配置
+	// 默認動畫配置
 	defaultAnimation: {
-		// 是否启用默认动画
+		// 是否啟用默認動畫
 		enable: true,
-		// 基础延迟时间（毫秒）
+		// 基礎延遲（毫秒）
 		baseDelay: 0,
-		// 递增延迟时间（毫秒），每个组件依次增加的延迟
+		// 遞增延遲（毫秒），添加到每個後續組件
 		increment: 50,
 	},
 
-	// 响应式布局配置
+	// 響應式佈局配置
 	responsive: {
-		// 断点配置（像素值）
+		// 斷點配置（像素值）
 		breakpoints: {
-			// 移动端断点：屏幕宽度小于768px
+			// 移動端斷點：屏幕寬度小於768px
 			mobile: 768,
-			// 平板端断点：屏幕宽度小于1280px
+			// 平板端斷點：屏幕寬度小於1280px
 			tablet: 1280,
-			// 桌面端断点：屏幕宽度小于1280px
+			// 桌面端斷點：屏幕寬度小於1280px
 			desktop: 1280,
 		},
-		// 不同设备的布局模式
-		//hidden:不显示侧边栏(桌面端)   drawer:抽屉模式(移动端不显示)   sidebar:显示侧边栏
+		// 不同設備的佈局模式
+		// hidden: 隱藏側邊欄 (桌面端)   drawer: 抽屜模式 (移動端不顯示)   sidebar: 顯示側邊欄
 		layout: {
-			// 移动端：抽屉模式
+			// 移動端：抽屜模式
 			mobile: "sidebar",
-			// 平板端：显示侧边栏
+			// 平板端：顯示側邊欄
 			tablet: "sidebar",
-			// 桌面端：显示侧边栏
+			// 桌面端：顯示側邊欄
 			desktop: "sidebar",
 		},
 	},
 };
 
 export const sakuraConfig: SakuraConfig = {
-	enable: false, // 默认关闭樱花特效
-	sakuraNum: 21, // 樱花数量
-	limitTimes: -1, // 樱花越界限制次数，-1为无限循环
+	enable: false, // 默認禁用櫻花效果
+	sakuraNum: 21, // 櫻花花瓣數量
+	limitTimes: -1, // 櫻花越界次數，-1為無限循環
 	size: {
-		min: 0.5, // 樱花最小尺寸倍数
-		max: 1.1, // 樱花最大尺寸倍数
+		min: 0.5, // 最小櫻花尺寸倍數
+		max: 1.1, // 最大櫻花尺寸倍數
 	},
 	opacity: {
-		min: 0.3, // 樱花最小不透明度
-		max: 0.9, // 樱花最大不透明度
+		min: 0.3, // 最小櫻花不透明度
+		max: 0.9, // 最大櫻花不透明度
 	},
 	speed: {
 		horizontal: {
-			min: -1.7, // 水平移动速度最小值
-			max: -1.2, // 水平移动速度最大值
+			min: -1.7, // 最小水平速度
+			max: -1.2, // 最大水平速度
 		},
 		vertical: {
-			min: 1.5, // 垂直移动速度最小值
-			max: 2.2, // 垂直移动速度最大值
+			min: 1.5, // 最小垂直速度
+			max: 2.2, // 最大垂直速度
 		},
-		rotation: 0.03, // 旋转速度
-		fadeSpeed: 0.03, // 消失速度，不应大于最小不透明度
+		rotation: 0.03, // 旋轉速度
+		fadeSpeed: 0.03, // 淡出速度，不應大於最小不透明度
 	},
-	zIndex: 100, // 层级，确保樱花在合适的层级显示
+	zIndex: 100, // z-index，確保櫻花在正確的層級顯示
 };
 
-// Pio 看板娘配置
+// Pio Live2D 角色配置
 export const pioConfig: import("./types/config").PioConfig = {
-	enable: true, // 启用看板娘
-	models: ["/pio/models/pio/model.json"], // 默认模型路径
-	position: "left", // 默认位置在右侧
-	width: 280, // 默认宽度
-	height: 250, // 默认高度
-	mode: "draggable", // 默认为可拖拽模式
-	hiddenOnMobile: true, // 默认在移动设备上隐藏
+	enable: false, // 啟用 Live2D 角色
+	models: ["/pio/models/pio/model.json"], // 默認模型路徑
+	position: "left", // 默認位置在右側
+	width: 280, // 默認寬度
+	height: 250, // 默認高度
+	mode: "draggable", // 默認為可拖拽模式
+	hiddenOnMobile: true, // 默認在移動設備上隱藏
 	dialog: {
-		welcome: "Welcome to Mizuki Website!", // 欢迎词
+		welcome: "Welcome to Mizuki Website!", // 歡迎信息
 		touch: [
 			"What are you doing?",
 			"Stop touching me!",
 			"HENTAI!",
 			"Don't bully me like that!",
-		], // 触摸提示
-		home: "Click here to go back to homepage!", // 首页提示
-		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
-		close: "QWQ See you next time~", // 关闭提示
-		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
+		], // 觸摸提示
+		home: "Click here to go back to the homepage!", // 主頁提示
+		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 皮膚更換提示
+		close: "QWQ See you next time~", // 關閉提示
+		link: "https://github.com/matsuzaka-yuki/Mizuki", // 關於鏈接
 	},
 };
 
-// 导出所有配置的统一接口
+// 所有小部件配置的統一導出
 export const widgetConfigs = {
 	profile: profileConfig,
 	announcement: announcementConfig,
@@ -671,10 +675,10 @@ export const widgetConfigs = {
 } as const;
 
 export const umamiConfig = {
-	enabled: false, // 是否显示Umami统计
-	apiKey: import.meta.env.UMAMI_API_KEY || "api_xxxxxxxx", // API密钥优先从环境变量读取，否则使用配置文件中的值
-	baseUrl: "https://api.umami.is", // Umami Cloud API地址
+	enabled: false, // 是否顯示Umami統計信息
+	apiKey: import.meta.env.UMAMI_API_KEY || "api_xxxxxxxx", // API密鑰首先從環境變量讀取，否則使用配置文件中的值
+	baseUrl: "https://api.umami.is", // Umami Cloud API 地址
 	scripts: `
 <script defer src="XXXX.XXX" data-website-id="ABCD1234"></script>
-  `.trim(), // 上面填你要插入的Script,不用再去Layout中插入
+  `.trim(), // 在此處插入你想要的腳本，無需在佈局中插入
 } as const;
