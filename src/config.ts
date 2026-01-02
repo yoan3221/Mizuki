@@ -13,6 +13,7 @@ import type {
 	ShareConfig,
 	SidebarLayoutConfig,
 	SiteConfig,
+	DeviceConfig, // 新增 DeviceConfig 類型
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
@@ -195,9 +196,9 @@ export const siteConfig: SiteConfig = {
 		},
 		cjkFont: {
 			// 中日韓字體 - 作為回退字體
-			fontFamily: "loli-body-2",
+			fontFamily: "萝莉体 第二版",
 			fontWeight: "500",
-			localFonts: ["loli-body-2.ttf"],
+			localFonts: ["萝莉体 第二版.ttf"],
 			enableCompress: true, // 啟用字體子集優化，減少字體文件大小
 		},
 	},
@@ -236,105 +237,27 @@ export const navBarConfig: NavBarConfig = {
 	links: [
 		LinkPreset.Home,
 		LinkPreset.Archive,
-		// 支持自定義導航欄鏈接,並且支持多級菜單,3.1版本新加
 		{
-			name: "Links",
-			url: "/links/",
-			icon: "material-symbols:link",
-			children: [
-				{
-					name: "Discord",
-					icon: "fa6-brands:discord",
-					url: "https://discordapp.com/users/615479304540651541",
-				},
-				{
-					name: "Facebook",
-					icon: "fa6-brands:facebook",
-					url: "https://www.facebook.com/yoan.happy.3",
-				},
-				{
-					name: "Threads",
-					icon: "fa6-brands:threads",
-					url: "https://www.threads.com/@yuan_uwu?hl=zh-tw",
-				},
-				{
-					name: "Instagram",
-					icon: "fa6-brands:instagram",
-					url: "https://www.instagram.com/yuan_uwu",
-				},
-				{
-					name: "Openlist",
-					icon: "material-symbols:list-alt",
-					url: "https://openlist.g8kz.top/",
-				},
-			],
+			name: "Gallery",
+			url: "/albums/",
+			icon: "material-symbols:photo-library",
 		},
 		{
-			name: "My",
-			url: "/content/",
-			icon: "material-symbols:person",
-			children: [
-				{
-					name: "Anime",
-					url: "/anime/",
-					icon: "material-symbols:movie",
-				},
-				{
-					name: "Diary",
-					url: "/diary/",
-					icon: "material-symbols:book",
-				},
-				{
-					name: "Gallery",
-					url: "/albums/",
-					icon: "material-symbols:photo-library",
-				},
-				{
-					name: "Devices",
-					url: "devices/",
-					icon: "material-symbols:devices",
-					external: false,
-				},
-			],
+			name: "Devices",
+			url: "devices/",
+			icon: "material-symbols:devices",
+			external: false,
 		},
+		// About
 		{
 			name: "About",
-			url: "/content/",
-			icon: "material-symbols:info",
-			children: [
-				{
-					name: "About",
-					url: "/about/",
-					icon: "material-symbols:person",
-				},
-				{
-					name: "Friends",
-					url: "/friends/",
-					icon: "material-symbols:group",
-				},
-			],
+			url: "/about/",
+			icon: "material-symbols:person",
 		},
 		{
-			name: "Others",
-			url: "#",
-			icon: "material-symbols:more-horiz",
-			children: [
-				{
-					name: "Projects",
-					url: "/projects/",
-					icon: "material-symbols:work",
-				},
-				{
-					name: "Skills",
-					url: "/skills/",
-					icon: "material-symbols:psychology",
-				},
-				{
-					name: "Timeline",
-					url: "/timeline/",
-					icon: "material-symbols:timeline",
-				},
-			],
+			name: "Friends",
+			url: "/friends/",
+			icon: "material-symbols:group",
 		},
 	],
 };
@@ -456,6 +379,33 @@ export const footerConfig: FooterConfig = {
 	// 你也可以直接編輯 FooterConfig.html 文件來添加自定義內容如ICP備案號
 	// 注意：如果 customHtml 不為空，將使用其內容；如果為空，將使用 FooterConfig.html 的內容
 	// FooterConfig.html 可能在未來版本中被棄用
+};
+
+// 設備配置
+export const deviceConfig: DeviceConfig = {
+    mainWorkstation: {
+        name: "RYZEN5800X",
+        os: "Windows 11 Pro for Workstations (24H2)",
+        cpu: "AMD Ryzen 7 5800X (8 Cores, 16 Threads)",
+        gpu: "NVIDIA GeForce RTX 3080 Ti (12GB, Gigabyte)",
+        ram: "64GB DDR4 (4x16GB, 混插 TeamGroup 與 Micron)",
+        storage: "2TB SSD RAID Array (AMD-RAID)",
+        monitor: "Dell AW3418DW (34\" Ultrawide, 3440 x 1440 @ 120Hz)",
+        network: ["Realtek PCIe GbE (實體)", "Tailscale (虛擬內網/VPN)"],
+    },
+    mobileDevices: {
+        laptop: "MacBook Air M2 (8GB RAM / 256GB SSD)",
+        tablet: "iPad Air 5 (64GB)",
+        gamingHandheld: "Steam Deck LCD (256GB)",
+    },
+    audioGear: {
+        headphones: ["Sony ULT WEAR", "AirPods"],
+        microphone: "Elgato Wave:1",
+    },
+    photographyGear: {
+        cameraBody: "Canon EOS 5D Mark II (5D2)",
+        lenses: ["EF 24-105mm f/4L IS II USM", "EF 70-200mm f/2.8L IS III USM"],
+    },
 };
 
 /**
@@ -672,6 +622,7 @@ export const widgetConfigs = {
 	fullscreenWallpaper: fullscreenWallpaperConfig,
 	pio: pioConfig, // 添加 pio 配置
 	share: shareConfig, // 添加分享配置
+	devices: deviceConfig, // 新增 devices 配置
 } as const;
 
 export const umamiConfig = {
