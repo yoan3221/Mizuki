@@ -45,7 +45,7 @@ export const siteConfig: SiteConfig = {
 		skills: false, // 技能頁面開關
 		timeline: false, // 時間線頁面開關
 		albums: true, // 相冊頁面開關
-		devices: true, // 設備頁面開關
+		devices: false, // 設備頁面開關
 	},
 
 	// 頂欄標題配置
@@ -77,7 +77,7 @@ export const siteConfig: SiteConfig = {
 	// 標籤樣式配置
 	tagStyle: {
 		// 是否使用新樣式（懸停高亮樣式）還是舊樣式（外框常亮樣式）
-		useNewStyle: false,
+		useNewStyle: true,
 	},
 
 	// 壁紙模式配置
@@ -123,7 +123,7 @@ export const siteConfig: SiteConfig = {
 		waves: {
 			enable: true, // 是否啟用水波紋效果(這個功能比較吃性能)
 			performanceMode: false, // 性能模式：減少動畫複雜度(性能提升40%)
-			mobileDisable: false, // 移動端禁用
+			mobileDisable: true, // 移動端禁用
 		},
 
 		// PicFlow API支持(智能圖片API)
@@ -398,7 +398,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 組件類型：公告組件
 			type: "announcement",
 			// 此組件是否啟用（現在由統一配置控制）
-			enable: true,
+			enable: false,
 			// 組件顯示順序
 			order: 2,
 			// 組件位置："top" 表示固定在頂部
