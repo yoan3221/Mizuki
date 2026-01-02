@@ -1,49 +1,53 @@
+# About Me
 
-This website is built with the **Astro** framework using the [Mizuki](https://github.com/matsuzaka-yuki/mizuki) theme.
+## 🚀 Overview
+UwU
+---
 
-::github{repo="matsuzaka-yuki/Mizuki"}
+## 🛠 Tech Stack
 
-## 🌟 Theme Features
-
-### 🎨 Design & User Experience
-- **Modern & Elegant Design** - Clean, minimalist interface with beautiful typography
-- **Fully Responsive** - Optimized for all devices from mobile to desktop
-- **Dark/Light Mode** - Automatic theme switching with smooth transitions
-- **Beautiful Typography** - Enhanced readability with JetBrains Mono font
-- **Smooth Animations** - Fluid page transitions and interactive elements
-
-### 🔍 Content & Search
-- **Advanced Search** - Powered by [Pagefind](https://pagefind.app/) for fast, accurate results
-- **Enhanced Markdown** - Extended syntax with code highlighting and math support
-- **Interactive Table of Contents** - Auto-scroll navigation for long articles
-- **RSS Feed Generation** - Stay updated with automatic feed generation
-- **Reading Time Estimation** - Know how long articles take to read
-- **Post Categorization** - Organize content with tags and categories
-
-
-
-### 📱 Special Pages
-- **Anime Tracking Page** - Track your anime watching progress with ratings
-- **Friends Links Page** - Showcase friend websites with beautiful cards
-- **Diary/Moments Page** - Share life moments like social media posts
-- **Archive Page** - Organized timeline view of all posts
-- **About Page** - Customizable personal introduction (this page!)
-
-### 🛠 Technical Features
-- **Enhanced Code Blocks** - Powered by [Expressive Code](https://expressive-code.com/)
-- **Math Support** - LaTeX rendering with KaTeX for mathematical expressions
-- **Image Optimization** - PhotoSwipe gallery with lazy loading
-- **SEO Optimized** - Built-in sitemap and meta tags for better search visibility
-- **Performance Optimized** - Fast loading with caching and optimization
-- **Comment System Ready** - Integration support for Twikoo comments
-
-### 🎯 Advanced Markdown Features
-- **Callouts & Admonitions** - Beautiful info boxes with `> [!NOTE]`, `> [!TIP]`, `> [!WARNING]`
-- **Mathematical Equations** - Write LaTeX math with `$inline$` and `$$block$$` syntax
-- **GitHub Cards** - Embed repository cards with `::github{repo="user/repo"}`
-- **Syntax Highlighting** - Advanced code highlighting with line numbers
-- **Copy Code Buttons** - Easy code copying functionality
+- **Software:** Node.js, Git, PowerShell, JetBrains (WebStorm)
+- **DevOps/Virtualization:** Docker, Tailscale, Windows 11 Pro for Workstations
+- **Engineering:** PLC Programming, Circuit Logic, RF Testing
+- **Networking:** MikroTik (WinBox), Cisco Packet Tracer, FortiOS
+- **AI/ML:** YOLO (Object Detection), Ollama (Local LLMs)
 
 ---
 
-*Built with ❤️ using Astro and inspired by modern web design principles.*
+## 🖥 Hardware & Workspace (My Gear)
+
+### ⚡ Main Workstation (Code: RYZEN5800X)
+- **CPU:** AMD Ryzen 7 5800X (8 Cores, 16 Threads)
+- **GPU:** NVIDIA GeForce RTX 3080 Ti (12GB, Gigabyte)
+- **RAM:** 64GB DDR4 Dual-Channel (TeamGroup & Micron)
+- **Storage:** 1.9TB SSD RAID Array (AMD-RAID)
+- **Display:** Dell AW3418DW (34" Curved Ultrawide, 3440 x 1440 @ 120Hz)
+- **OS:** Windows 11 Pro for Workstations (64-bit)
+
+### 🎒 Mobile & Productivity
+- **Laptop:** MacBook Air M2 (8GB RAM / 256GB SSD)
+- **Tablet:** iPad Air 5 (64GB)
+- **Handheld:** Steam Deck LCD (256GB)
+
+### 🌐 Network Infrastructure (Home Lab)
+- **Core Router:** MikroTik RB5009UG+S+ 
+- **Firewall:** Fortinet Fortigate FG90D
+- **Wi-Fi Mesh:** Redmi AX6 / AX3000 / AX1500
+
+### 📷 Photography Gear
+- **Body:** Canon EOS 5D Mark II
+  - **Lenses:** - Canon EF 24-105mm f/4L IS II USM (Standard Zoom)
+  - **Lenses:** - Canon EF 70-200mm f/2.8L IS III USM (The "Great Trinity" Telephoto)
+
+### 🎧 Audio & Peripherals
+- **Mic:** Elgato Wave:1 
+- **Mouse:** Razer Viper 8KHz
+- **Headphones:** Sony ULT WEAR (Over-ear) / AirPods 4 (In-ear)
+
+---
+
+## 📫 Connect with Me
+- **Communication:** Telegram (Unigram), Discord, Discord
+- **Workflow:** Enthusiastic user of WebStorm and CLI-driven environments.
+
+*"From circuit boards to browsers, building the future one line of code at a time."*

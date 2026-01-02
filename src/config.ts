@@ -13,7 +13,6 @@ import type {
 	ShareConfig,
 	SidebarLayoutConfig,
 	SiteConfig,
-	DeviceConfig, // 新增 DeviceConfig 類型
 } from "./types/config";
 import { LinkPreset } from "./types/config";
 
@@ -39,12 +38,12 @@ export const siteConfig: SiteConfig = {
 
 	// 特色頁面開關配置(關閉不在使用的頁面有助於提升SEO,關閉後直接在頂部導航刪除對應的頁面就行)
 	featurePages: {
-		anime: true, // 番劇頁面開關
+		anime: false, // 番劇頁面開關
 		diary: true, // 日記頁面開關
 		friends: true, // 友鏈頁面開關
-		projects: true, // 項目頁面開關
-		skills: true, // 技能頁面開關
-		timeline: true, // 時間線頁面開關
+		projects: false, // 項目頁面開關
+		skills: false, // 技能頁面開關
+		timeline: false, // 時間線頁面開關
 		albums: true, // 相冊頁面開關
 		devices: true, // 設備頁面開關
 	},
@@ -243,13 +242,6 @@ export const navBarConfig: NavBarConfig = {
 			icon: "material-symbols:photo-library",
 		},
 		{
-			name: "Devices",
-			url: "devices/",
-			icon: "material-symbols:devices",
-			external: false,
-		},
-		// About
-		{
 			name: "About",
 			url: "/about/",
 			icon: "material-symbols:person",
@@ -380,39 +372,6 @@ export const footerConfig: FooterConfig = {
 	// 注意：如果 customHtml 不為空，將使用其內容；如果為空，將使用 FooterConfig.html 的內容
 	// FooterConfig.html 可能在未來版本中被棄用
 };
-
-// 設備配置
-export const deviceConfig: DeviceConfig = {
-    mainWorkstation: {
-        name: "RYZEN5800X",
-        os: "Windows 11 Pro for Workstations (24H2)",
-        cpu: "AMD Ryzen 7 5800X (8 Cores, 16 Threads)",
-        gpu: "NVIDIA GeForce RTX 3080 Ti (12GB, Gigabyte)",
-        ram: "64GB DDR4 (4x16GB, 混插 TeamGroup 與 Micron)",
-        storage: "2TB SSD RAID Array (AMD-RAID)",
-        monitor: "Dell AW3418DW (34\" Ultrawide, 3440 x 1440 @ 120Hz)",
-        network: ["Realtek PCIe GbE (實體)", "Tailscale (虛擬內網/VPN)"],
-    },
-    mobileDevices: {
-        laptop: "MacBook Air M2 (8GB RAM / 256GB SSD)",
-        tablet: "iPad Air 5 (64GB)",
-        gamingHandheld: "Steam Deck LCD (256GB)",
-    },
-    audioGear: {
-        headphones: ["Sony ULT WEAR", "AirPods"],
-        microphone: "Elgato Wave:1",
-    },
-    photographyGear: {
-        cameraBody: "Canon EOS 5D Mark II (5D2)",
-        lenses: ["EF 24-105mm f/4L IS II USM", "EF 70-200mm f/2.8L IS III USM"],
-    },
-};
-
-/**
- * 側邊欄佈局配置
- * 用於控制側邊欄組件的顯示、排序、動畫和響應式行為
- * sidebar: 控制組件在左側欄和右側欄。注意移動端不顯示右側欄內容（unilateral模式除外）。設置right屬性時請確保使用雙側(both)佈局。
- */
 export const sidebarLayoutConfig: SidebarLayoutConfig = {
 	// 側邊欄位置：單側(unilateral)或雙側(both)
 	position: "both",
@@ -497,7 +456,7 @@ export const sidebarLayoutConfig: SidebarLayoutConfig = {
 			// 組件類型：站點統計組件
 			type: "site-stats",
 			// 是否啟用此組件
-			enable: true,
+			enable: false,
 			// 組件顯示順序
 			order: 5,
 			// 組件位置
@@ -622,7 +581,6 @@ export const widgetConfigs = {
 	fullscreenWallpaper: fullscreenWallpaperConfig,
 	pio: pioConfig, // 添加 pio 配置
 	share: shareConfig, // 添加分享配置
-	devices: deviceConfig, // 新增 devices 配置
 } as const;
 
 export const umamiConfig = {
